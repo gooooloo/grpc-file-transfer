@@ -7,7 +7,8 @@ service FileServer {
 }
 
 message Chunk {
-  bytes buffer = 1;
+  string hash = 1;
+  bytes buffer = 2;
 }
 
 message Request {
@@ -15,5 +16,6 @@ message Request {
 }
 
 message Reply {
-  int32 length = 1;
+  string msg = 1;
+  int32 length = 2;
 }

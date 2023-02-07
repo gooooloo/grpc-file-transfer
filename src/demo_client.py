@@ -15,5 +15,6 @@ if __name__ == '__main__':
     if os.path.exists(out_file_name):
         os.remove(out_file_name)
     client.download('whatever_name', out_file_name)
+    print()
     os.system(f'sha1sum {in_file_name}')
     os.system(f'sha1sum {out_file_name}')
